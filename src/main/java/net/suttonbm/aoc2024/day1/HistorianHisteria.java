@@ -1,4 +1,4 @@
-package net.suttonbm.aoc2024.d1;
+package net.suttonbm.aoc2024.day1;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -13,11 +13,11 @@ import java.util.List;
 @Component
 @RequiredArgsConstructor
 @Slf4j
-public class D1A implements CommandLineRunner {
+public class HistorianHisteria implements CommandLineRunner {
 
     final ResourceLoader resourceLoader;
 
-    static final String inputPath = "1/A/input.txt";
+    static final String inputPath = "classpath:/1/input.txt";
 
     @Override
     public void run(String... args) throws Exception {
@@ -47,7 +47,6 @@ public class D1A implements CommandLineRunner {
 
         long result = col1.stream().map(x -> {
             long times = col2.stream().filter(x::equals).count();
-            log.info("Similarity: {} appears {} times", x, times);
             return x * times;
         }).mapToLong(i -> i).sum();
 

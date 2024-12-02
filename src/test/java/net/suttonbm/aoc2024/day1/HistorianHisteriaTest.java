@@ -1,4 +1,4 @@
-package net.suttonbm.aoc2024.d1;
+package net.suttonbm.aoc2024.day1;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -14,19 +14,19 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
-class D1ATest {
+class HistorianHisteriaTest {
 
     @Autowired
     private ResourceLoader resourceLoader;
 
     @Autowired
-    D1A scriptRunner;
+    HistorianHisteria scriptRunner;
 
     Resource input;
 
     @BeforeEach
     void setUp() {
-        input = resourceLoader.getResource("1/A/testInput.txt");
+        input = resourceLoader.getResource("classpath:/1/testInput.txt");
     }
 
     @Test
