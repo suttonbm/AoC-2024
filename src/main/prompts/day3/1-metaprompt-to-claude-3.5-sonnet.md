@@ -1,7 +1,3 @@
-23eSubmitted to Claude-3.5-haiku
-
------------------------------------
-
 Today you will be writing instructions to an eager, helpful, but inexperienced and unworldly AI assistant who needs careful instruction and examples to understand how best to behave. I will explain a task to you. You will write instructions that will direct the assistant on how best to accomplish the task consistently, accurately, and correctly. Here are some examples of tasks and instructions.
 
 <Task Instruction Example>
@@ -458,36 +454,20 @@ The question to answer is:
 That concludes the examples. Now, here is the task for which I would like you to write instructions:
 
 <Task>
-You are provided some data consisting of many reports, one report per line. Each report is a list of numbers called levels that are separated by spaces. For example:
+A computer appears to be trying to run a program, but its memory (classpath:/3/input.txt) is corrupted. All of the instructions have been jumbled up!
 
-<Example>
-7 6 4 2 1
-1 2 7 8 9
-9 7 6 2 1
-1 3 2 4 5
-8 6 4 4 1
-1 3 6 7 9
-</Example>
+It seems like the goal of the program is just to multiply some numbers. It does that with instructions like mul(X,Y), where X and Y are each 1-3 digit numbers. For instance, mul(44,46) multiplies 44 by 46 to get a result of 2024. Similarly, mul(123,4) would multiply 123 by 4.
 
-This example data contains six reports each containing five levels.
+However, because the program's memory has been corrupted, there are also many invalid characters that should be ignored, even if they look like part of a mul instruction. Sequences like mul(4*, mul(6,9!, ?(12,34), or mul ( 2 , 4 ) do nothing.
 
-The engineers are trying to figure out which reports are safe. The Red-Nosed reactor safety systems can only tolerate levels that are either gradually increasing or gradually decreasing. So, a report only counts as safe if both of the following are true:
+For example, consider the following section of corrupted memory:
 
-1. The levels are either all increasing or all decreasing.
-2. Any two adjacent levels differ by at least one and at most three.
+xmul(2,4)%&mul[3,7]!@^do_not_mul(5,5)+mul(32,64]then(mul(11,8)mul(8,5))
 
-In the example above, the reports can be found safe or unsafe by checking those rules:
+Only the four highlighted sections are real mul instructions. Adding up the result of each instruction produces 161 (2*4 + 5*5 + 11*8 + 8*5).
 
-1. 7 6 4 2 1: Safe because the levels are all decreasing by 1 or 2.
-2. 1 2 7 8 9: Unsafe because 2 7 is an increase of 5.
-3. 9 7 6 2 1: Unsafe because 6 2 is a decrease of 4.
-4. 1 3 2 4 5: Unsafe because 1 3 is increasing but 3 2 is decreasing.
-5. 8 6 4 4 1: Unsafe because 4 4 is neither an increase or a decrease.
-6. 1 3 6 7 9: Safe because the levels are all increasing by 1, 2, or 3.
-
-So, in this example, 2 reports are safe.
-
-Analyze the unusual data from the engineers. How many reports are safe?  Propose a potential workflow to build a programmatic solution using Java Spring Boot.
+Scan the corrupted memory for uncorrupted mul instructions.
+What do you get if you add up all of the results of the multiplications?
 </Task>
 
 To write your instructions, follow THESE instructions:
