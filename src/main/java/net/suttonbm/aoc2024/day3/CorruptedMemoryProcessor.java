@@ -75,7 +75,7 @@ public class CorruptedMemoryProcessor implements CommandLineRunner {
                         .mapToInt(Integer::intValue)
                         .sum();
             } else {
-                logger.error("Invalid instruction: {}", instruction.getOriginalInstruction());
+                logger.debug("Invalid instruction: {}", instruction.getOriginalInstruction());
             }
         }
 

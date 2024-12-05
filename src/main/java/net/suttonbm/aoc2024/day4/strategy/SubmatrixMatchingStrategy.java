@@ -16,7 +16,7 @@ public class SubmatrixMatchingStrategy implements SearchStrategy {
 
         log.info("Sub-array pattern has {} rows and {} cols", patternArray.length, patternArray[0].length);
         for(int row = 0; row < patternArray.length; row++) {
-            log.info(new String(patternArray[row]));
+            log.debug(new String(patternArray[row]));
         }
 
         for (SubmatrixTransform direction : SubmatrixTransform.values()) {
@@ -31,7 +31,7 @@ public class SubmatrixMatchingStrategy implements SearchStrategy {
                 }
             }
 
-            log.info("Transform {} found {} matches", direction.name(), newMatches.size());
+            log.debug("Transform {} found {} matches", direction.name(), newMatches.size());
             matches.addAll(newMatches);
         }
 

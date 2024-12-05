@@ -32,7 +32,7 @@ public class PuzzleServiceImpl implements PuzzleService {
         int totalMatches = 0;
         for (SearchStrategy strategy : strategies) {
             int strategyMatches = strategy.findMatches(matrix, pattern).size();
-            log.info("Strategy {} found {} matches.", strategy, strategyMatches);
+            log.debug("Strategy {} found {} matches.", strategy, strategyMatches);
             totalMatches += strategyMatches;
         }
         return totalMatches;
