@@ -9,7 +9,7 @@ import net.suttonbm.aoc2024.day6.service.PatrolSimulator;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-@Component
+
 @Slf4j
 @RequiredArgsConstructor
 public class GuardPatrolRunner implements CommandLineRunner {
