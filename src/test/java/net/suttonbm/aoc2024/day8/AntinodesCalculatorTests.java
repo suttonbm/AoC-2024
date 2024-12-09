@@ -1,14 +1,14 @@
 package net.suttonbm.aoc2024.day8;
 
 import net.suttonbm.aoc2024.day8.service.AntinodesCalculator;
-import net.suttonbm.aoc2024.day8.service.InputFileParser;
+import net.suttonbm.aoc2024.day8.service.RegionFileParser;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 class AntinodesCalculatorTests {
 
     private final AntinodesCalculator antinodesCalculator = new AntinodesCalculator();
-    private final InputFileParser inputFileParser = new InputFileParser();
+    private final RegionFileParser inputFileParser = new RegionFileParser();
 
     @Test
     void testCalculateUniqueAntinodes_EmptyRegion() {

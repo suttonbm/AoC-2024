@@ -12,7 +12,7 @@ import java.util.List;
 
 @Component
 @Slf4j
-public class InputFileParser {
+public class RegionFileParser {
 
     public char[][] parseInputFile(String filePath) {
         List<String> lines = new ArrayList<>();

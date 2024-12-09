@@ -3,9 +3,7 @@ package net.suttonbm.aoc2024.day8;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import net.suttonbm.aoc2024.day8.service.AntinodesCalculator;
-import net.suttonbm.aoc2024.day8.service.InputFileParser;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import net.suttonbm.aoc2024.day8.service.RegionFileParser;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -15,7 +13,7 @@ import org.springframework.stereotype.Component;
 public class RegionAnalyzerRunner implements CommandLineRunner {
 
     private final AntinodesCalculator antinodesCalculator;
-    private final InputFileParser inputFileParser;
+    private final RegionFileParser inputFileParser;
 
     @Override
     public void run(String... args) {
