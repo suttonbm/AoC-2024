@@ -23,7 +23,7 @@ public class TrailBuilder {
         }
 
         List<Point> peaks = new ArrayList<>();
-        for (Directions direction : Directions.values()) {
+        for (TopoMapDirections direction : TopoMapDirections.values()) {
             Point there = direction.get(here);
             if (map.isOnGrid(there)
                     && (map.heightAt(there) - map.heightAt(here)) == 1) {
@@ -40,7 +40,7 @@ public class TrailBuilder {
         }
 
         int rating = 0;
-        for (Directions direction : Directions.values()) {
+        for (TopoMapDirections direction : TopoMapDirections.values()) {
             Point there = direction.get(here);
             if (map.isOnGrid(there)
                     && (map.heightAt(there) - map.heightAt(here)) == 1) {

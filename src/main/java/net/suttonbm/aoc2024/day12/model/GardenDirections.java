@@ -1,8 +1,8 @@
-package net.suttonbm.aoc2024.day10.model;
+package net.suttonbm.aoc2024.day12.model;
 
-import java.awt.*;
+import java.awt.Point;
 
-public enum Directions {
+public enum GardenDirections {
     NORTH {
         @Override
         public Point get(Point from) {
