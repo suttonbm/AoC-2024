@@ -26,18 +26,13 @@ public class BathroomRunner implements CommandLineRunner {
 
         log.info("Safety factor after 100s: {}", result);
 
-        for (int i=100; i<=10000; i++) {
-            map.doTick();
-            if (i == 5830 || i == 6492) {
-                log.debug(map.toString());
-            }
-        }
+        map.doTicks(10000);
         Long maxAvg = map.getSafetyFactors().stream().max(Long::compareTo).get();
         int maxAvgIdx = map.getSafetyFactors().indexOf(maxAvg);
         Long minAvg = map.getSafetyFactors().stream().min(Long::compareTo).get();
         int minAvgIdx = map.getSafetyFactors().indexOf(minAvg);
 
-        log.info("Max avg safety factor ({}) occurs at iteration {}.", maxAvg, maxAvgIdx);
-        log.info("Min avg safety factor ({}) occurs at iteration {}.", minAvg, minAvgIdx);
+        log.info("Max avg safety factor ({}) occurs at iteration {}.", maxAvg, maxAvgIdx+1);
+        log.info("Min avg safety factor ({}) occurs at iteration {}.", minAvg, minAvgIdx+1);
     }
 }
