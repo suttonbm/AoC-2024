@@ -7,7 +7,6 @@ import net.suttonbm.aoc2024.day16.service.MazeReader;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-@Component
 @Slf4j
 @RequiredArgsConstructor
 public class ReindeerRunner implements CommandLineRunner {
