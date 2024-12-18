@@ -4,7 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import net.suttonbm.aoc2024.day16.model.Direction;
 import net.suttonbm.aoc2024.day16.model.Maze;
 import net.suttonbm.aoc2024.day16.model.Reindeer;
-import net.suttonbm.aoc2024.utils.ResourceReader;
+import net.suttonbm.aoc2024.utils.ResourceReaderService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,7 +14,7 @@ import java.awt.Point;
 @Slf4j
 public class MazeReader {
     public Maze load(String inputFile) throws Exception {
-        List<String> lines = ResourceReader.get(inputFile);
+        List<String> lines = ResourceReaderService.get(inputFile);
 
         return parse(lines);
     }

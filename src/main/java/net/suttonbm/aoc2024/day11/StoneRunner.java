@@ -4,7 +4,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import net.suttonbm.aoc2024.day11.service.BetterBlinker;
 import net.suttonbm.aoc2024.day11.service.Blinker;
-import net.suttonbm.aoc2024.utils.ResourceReader;
+import net.suttonbm.aoc2024.utils.ResourceReaderService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -23,7 +23,7 @@ public class StoneRunner implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        List<String> input = ResourceReader.get("11/input.txt");
+        List<String> input = ResourceReaderService.get("11/input.txt");
         List<Long> stones = Arrays.stream(input.get(0).split("\\s"))
                 .mapToLong(Long::parseLong)
                 .boxed()

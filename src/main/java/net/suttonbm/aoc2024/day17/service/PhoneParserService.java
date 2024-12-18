@@ -2,7 +2,7 @@ package net.suttonbm.aoc2024.day17.service;
 
 import lombok.extern.slf4j.Slf4j;
 import net.suttonbm.aoc2024.day17.model.Phone;
-import net.suttonbm.aoc2024.utils.ResourceReader;
+import net.suttonbm.aoc2024.utils.ResourceReaderService;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -14,7 +14,7 @@ import java.util.regex.Pattern;
 @Slf4j
 public class PhoneParserService {
     public Phone initialize(String inputFile) {
-        List<String> lines = ResourceReader.get(inputFile);
+        List<String> lines = ResourceReaderService.get(inputFile);
         Phone phone = initializePhone(lines);
         List<Integer> program = initializeProgram(lines);
         phone.setProgram(program);

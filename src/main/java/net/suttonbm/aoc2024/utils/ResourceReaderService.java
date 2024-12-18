@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j
-public class ResourceReader {
+public class ResourceReaderService {
     public static List<String> get(String filePath) {
         List<String> lines = new ArrayList<>();
         try {

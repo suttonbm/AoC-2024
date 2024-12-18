@@ -1,7 +1,7 @@
 package net.suttonbm.aoc2024.day15.service;
 
 import net.suttonbm.aoc2024.day15.model.LanternfishWarehouse;
-import net.suttonbm.aoc2024.utils.ResourceReader;
+import net.suttonbm.aoc2024.utils.ResourceReaderService;
 import org.springframework.stereotype.Service;
 
 import java.awt.Point;
@@ -10,7 +10,7 @@ import java.util.List;
 @Service
 public class LanternfishRobotParser {
     public LanternfishWarehouse load(String inputFile) {
-        List<String> lines = ResourceReader.get(inputFile);
+        List<String> lines = ResourceReaderService.get(inputFile);
 
         int rows = getMapRows(lines);
         int cols = getMapCols(lines);

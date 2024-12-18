@@ -2,7 +2,7 @@ package net.suttonbm.aoc2024.day14.service;
 
 import net.suttonbm.aoc2024.day14.model.Robot;
 import net.suttonbm.aoc2024.day4.exception.InvalidInputException;
-import net.suttonbm.aoc2024.utils.ResourceReader;
+import net.suttonbm.aoc2024.utils.ResourceReaderService;
 import org.springframework.stereotype.Service;
 
 import java.awt.*;
@@ -30,7 +30,7 @@ public class BathroomParser {
     }
 
     public List<Robot> load(String inputFile) {
-        List<String> lines = ResourceReader.get(inputFile);
+        List<String> lines = ResourceReaderService.get(inputFile);
         List<Robot> robots = new ArrayList<>();
         for (String line : lines) {
             robots.add(readLine(line));

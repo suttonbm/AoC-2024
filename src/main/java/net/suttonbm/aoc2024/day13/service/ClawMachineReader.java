@@ -3,7 +3,7 @@ package net.suttonbm.aoc2024.day13.service;
 import net.suttonbm.aoc2024.day13.model.ClawMachine;
 import net.suttonbm.aoc2024.day13.model.Operation;
 import net.suttonbm.aoc2024.day13.model.Prize;
-import net.suttonbm.aoc2024.utils.ResourceReader;
+import net.suttonbm.aoc2024.utils.ResourceReaderService;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -14,7 +14,7 @@ import java.util.regex.Pattern;
 @Service
 public class ClawMachineReader {
     public List<ClawMachine> parse(String inputFile) {
-        List<String> lines = new ArrayList<>(ResourceReader.get(inputFile));
+        List<String> lines = new ArrayList<>(ResourceReaderService.get(inputFile));
         List<ClawMachine> clawMachines = new ArrayList<>();
 
         int id = 0;

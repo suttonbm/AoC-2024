@@ -25,6 +25,6 @@ public class HistorianPhoneRunner implements CommandLineRunner {
         log.info("Program output: {}", output.stream()
                 .map(String::valueOf)
                 .collect(Collectors.joining(",")));
-        log.info("Fixed register value: {}", fixerService.fixPhone(phone));
+        //log.info("Fixed register value: {}", fixerService.fixPhone(phone));
     }
 }
